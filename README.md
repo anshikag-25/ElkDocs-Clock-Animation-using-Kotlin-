@@ -39,6 +39,7 @@ MainActivity
 
 The MainActivity sets up the content view and enables edge-to-edge display. It also configures the status bar appearance.
 
+```kotlin
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +49,8 @@ class MainActivity : ComponentActivity() {
                 SideEffect {
                     val window = this@MainActivity.window
                     window.statusBarColor = Color.Black.toArgb()
-                    WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = false
+                    WindowCompat.getInsetsController(window, window.decorView)
+                        .isAppearanceLightStatusBars = false
                 }
                 Surface(color = Color.Black) {
                     AnimatedScreen()
@@ -57,6 +59,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
 
 Composables
 
