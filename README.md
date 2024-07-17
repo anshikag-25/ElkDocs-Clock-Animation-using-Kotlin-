@@ -59,7 +59,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-\```
+```
 
 Composables
 
